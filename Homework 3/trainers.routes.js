@@ -1,6 +1,5 @@
 import express from 'express';
 import fs from 'fs';
-import { hostname } from 'os';
 
 const app = express();
 const PORT = 3000;
@@ -65,6 +64,6 @@ app.delete('/trainers', (req, res) => {
 
 app.use('/home', express.static('public'));
 
-app.listen(PORT,hostname, () => {
+app.listen(PORT,HOSTNAME, () => {
   console.log(`Server is listening on http://${HOSTNAME}:${PORT}`);
 });
